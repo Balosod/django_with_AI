@@ -1,0 +1,10 @@
+{% extends 'app/base.html' %} {% block content %}
+<h3>Instruction</h3>
+
+<form method="post">
+  {% csrf_token %}
+  <input type="text" class="form-control" name="data" />
+  <button type="submit" class="btn btn-primary mt-3">Submit</button>
+</form>
+<p>{{response}}</p>
+{% endblock content %}
